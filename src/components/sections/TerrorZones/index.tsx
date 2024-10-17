@@ -28,30 +28,45 @@ export const TerrorZones = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setTrigger((prev) => !prev);
-    }, 1800000);
+    }, 300000);
     return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
     fetchData();
 
-    if (data && data.next) {
-      console.log(data.next);
-      const matches = data.next.filter((value) =>
+    if (data && data.current) {
+      const currentMatches = data.next.filter((value) =>
         favoriteZones.includes(value)
       );
-      if (matches.length > 0) {
+      if (currentMatches.length > 0) {
         const result: string[] = [];
-        matches.filter(
+        currentMatches.filter(
           (zone) =>
             Object.keys(zones).includes(zone) &&
             result.push(zones[zone].location)
         );
-
-        const body = result.join(" ");
-
+        const currentBody = result.join(" ");
         sendTelegramNotification(
-          `Next Terror Zone:\n 🔥<strong>${body}</strong>!!!`
+          `Current Terror Zone:\n 🔥<strong>${currentBody}</strong>!!!`
+        );
+      }
+    }
+
+    if (data && data.next) {
+      const nextMatches = data.next.filter((value) =>
+        favoriteZones.includes(value)
+      );
+      if (nextMatches.length > 0) {
+        const result: string[] = [];
+        nextMatches.filter(
+          (zone) =>
+            Object.keys(zones).includes(zone) &&
+            result.push(zones[zone].location)
+        );
+        const nextBody = result.join(" ");
+        sendTelegramNotification(
+          `Next Terror Zone:\n 🔥<strong>${nextBody}</strong>!!!`
         );
       }
     }

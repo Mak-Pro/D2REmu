@@ -1,0 +1,26 @@
+:export {
+  // telegram
+  tgBgColor: $tgBgColor;
+  tgTextColor: $tgTextColor;
+  tgSecondaryBgColor: $tgSecondaryBgColor;
+  tgAccentTextColor: $tgAccentTextColor;
+  tgHintColor: $tgHintColor;
+  tgLinkColor: $tgLinkColor;
+  tgButtonBgColor: $tgButtonBgColor;
+  tgButtonTextColor: $tgButtonTextColor;
+  tgHeaderBgColor: $tgHeaderBgColor;
+  tgSectionBgColor: $tgSectionBgColor;
+  tgSectionHeaderTextColor: $tgSectionHeaderTextColor;
+  tgSubTitleTextColor: $tgSubTitleTextColor;
+  tgDestructiveTextColor: $tgDestructiveTextColor;
+  tgColorScheme: $tgColorScheme;
+  tgViewportHeight: $tgViewportHeight;
+  tgViewportStableHeight: $tgViewportStableHeight;
+
+  // colors
+  white: $white;
+
+  // layout
+  containerGlobalPadding: $containerGlobalPadding;
+  maxWidth: $maxWidth;
+}

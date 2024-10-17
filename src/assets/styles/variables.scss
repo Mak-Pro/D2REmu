@@ -1,0 +1,24 @@
+// telegram
+$tgBgColor: var(--tg-theme-bg-color, #ffffff);
+$tgTextColor: var(--tg-theme-text-color, #1e2126);
+$tgSecondaryBgColor: var(--tg-theme-secondary-bg-color);
+$tgAccentTextColor: var(--tg-theme-accent-text-color);
+$tgHintColor: var(--tg-theme-hint-color);
+$tgLinkColor: var(--tg-theme-link-color);
+$tgButtonBgColor: var(--tg-theme-button-color, #499fdf);
+$tgButtonTextColor: var(--tg-theme-button-text-color, #ffffff);
+$tgHeaderBgColor: var(--tg-theme-header-bg-color);
+$tgSectionBgColor: var(--tg-theme-section-bg-color);
+$tgSectionHeaderTextColor: var(--tg-theme-section-header-text-color);
+$tgSubTitleTextColor: var(--tg-theme-subtitle-text-color);
+$tgDestructiveTextColor: var(--tg-theme-destructive-text-color);
+$tgColorScheme: var(--tg-color-scheme);
+$tgViewportHeight: var(--tg-viewport-height);
+$tgViewportStableHeight: var(--tg-viewport-stable-height);
+
+// colors
+$white: #ffffff;
+
+// layout
+$maxWidth: 560px;
+$containerGlobalPadding: 15px;

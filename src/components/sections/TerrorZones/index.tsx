@@ -19,7 +19,6 @@ export const TerrorZones = () => {
     try {
       const res = await fetch("/api/zones");
       const result: TerrorZonesProps = await res.json();
-      console.log(result);
       setData(result);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -29,14 +28,16 @@ export const TerrorZones = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setTrigger((prev) => !prev);
-      console.log(trigger);
     }, 300000);
     return () => clearInterval(intervalId);
   }, []);
 
+  console.log(trigger);
+
   useEffect(() => {
     fetchData();
     if (data && data.current) {
+      console.log(data);
       const currentMatches = data.next.filter((value) =>
         favoriteZones.includes(value)
       );
